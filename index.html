@@ -134,6 +134,74 @@
   transform: scale(1.1);
 }
 
+/* Mobile Responsiveness Improvements */
+@media (max-width: 768px) {
+    /* General responsive adjustments */
+    .big, .big-2 {
+        font-size: 4rem !important;
+    }
+    
+    /* Home section adjustments */
+    .hero .text h1 {
+        font-size: 2.5rem !important;
+    }
+    #typing-animation {
+        font-size: 20px !important;
+    }
+    
+    /* About section adjustments */
+    .img-about {
+        margin-bottom: 2rem;
+    }
+    .skill-item {
+        font-size: 16px;
+    }
+    
+    /* Project cards */
+    .blog-entry {
+        margin-bottom: 2rem;
+    }
+    
+    /* Contact section */
+    .contact-info .box {
+        margin-bottom: 1rem;
+    }
+    
+    /* Image gallery */
+    .image-marquee-container {
+        padding: 10px 0;
+    }
+    .marquee-img {
+        height: 150px;
+        margin: 0 8px;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .hero .text h1 {
+        font-size: 2rem !important;
+    }
+    #typing-animation {
+        font-size: 18px !important;
+    }
+    .big, .big-2 {
+        font-size: 3rem !important;
+        text-align: center;
+    }
+    
+    /* Adjust padding and margins for smaller screens */
+    .ftco-section {
+        padding: 4em 0;
+    }
+    .ftco-no-pt {
+        padding-top: 0;
+    }
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
 
 </style>
 
@@ -168,7 +236,7 @@
 	      	<div class="overlay"></div>
 	         <div class="container">
 	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/main.jpg);">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/main.jpeg);">
 	          	 <div class="overlay"></div>
 	          	</div>
 		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
@@ -746,6 +814,31 @@
   <script src="js/scrollax.min.js"></script>
   
   <script src="js/main.js"></script>
+
+  <script>
+    // Close mobile menu when clicking a nav item
+    document.addEventListener('DOMContentLoaded', function() {
+        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+        
+        navLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+                if (window.innerWidth < 992) {
+                    navbarCollapse.classList.remove('show');
+                }
+            });
+        });
+        
+        // Optimize image loading for mobile
+        if (window.innerWidth < 768) {
+            const lazyImages = document.querySelectorAll('.marquee-img');
+            lazyImages.forEach(img => {
+                img.loading = 'lazy';
+            });
+        }
+    });
+  </script>
     
   </body>
 </html>
