@@ -134,31 +134,6 @@
   transform: scale(1.1);
 }
 
-/* Main image styles - enhanced for responsiveness */
-
-.main-image-container {
-    margin: 20px 0;
-    max-width: 100%;
-}
-
-.main-hero-image {
-    max-width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease;
-    display: block;
-}
-
-.main-hero-image:hover {
-    transform: scale(1.03);
-}
-
-@media (max-width: 767px) {
-    .main-image-container {
-        margin: 30px auto 10px auto;
-        max-width: 80%;
-    }
-}
 
 </style>
 
@@ -195,26 +170,58 @@
 	         <div class="container">
 	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
 	          	
-		          <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
 		          	<div class="text">
-		          		<div class="d-flex flex-wrap">
-                            <div class="col-md-7 pr-md-4">
-                                <span class="subheading">Hello!</span>
-                                <h1 class="mb-4 mt-3">I'm <span>Chalani Chanchala</span></h1>
-                                
-                                <!-- Element to contain animated typing -->
-                                <span id="typing-animation"></span>
-                                <br>
-                                <br>
-                                <h2>An Undergraduate</h2>
-                                <p><a href="https://github.com/chalanichanchala22" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
-                            </div>
-                            <!-- <div class="col-md-5">
-                                <div class="main-image-container">
-                                    <img src="images/main.jpg" alt="Chalani Chanchala" class="main-hero-image">
-                                </div>
-                            </div> -->
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Chalani Chanchala</span></h1>
+                        <div class="main-image-container">
+                            <img src="images/main.jpg" alt="Chalani Chanchala" class="main-image">
                         </div>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Tech Enthusiast ',
+						'Web Developer  ',
+						'UI/UX Designer  ',
+						'Frontend Developer '
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2>An Undergraduate</h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p><!--<a href="https://www.youtube.com/@RishabhMishraOfficial" class="btn btn-primary py-3 px-4">YouTube</a>--> 
+							<a href="https://github.com/chalanichanchala22" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
 		            </div>
 		          </div>
 	        	</div>
