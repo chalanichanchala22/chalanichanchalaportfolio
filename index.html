@@ -135,51 +135,6 @@
 }
 
 
-/* Announcement Banner Styles */
-.announcement-banner {
-  background-color: rgba(255, 189, 57, 0.9);
-  padding: 10px 0;
-  position: relative;
-  z-index: 998;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.banner-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  text-align: center;
-}
-
-.banner-text {
-  color: #333;
-  font-weight: 500;
-}
-
-.banner-button {
-  background-color: #333;
-  color: white;
-  padding: 5px 15px;
-  border-radius: 20px;
-  font-size: 14px;
-  transition: all 0.3s ease;
-}
-
-.banner-button:hover {
-  background-color: #222;
-  color: white;
-  text-decoration: none;
-}
-
-@media (max-width: 768px) {
-  .banner-content {
-    flex-direction: column;
-    gap: 8px;
-  }
-}
-
 </style>
 
 
@@ -208,19 +163,7 @@
           </div>
         </div>
     </nav>
-
-    <!-- Announcement Banner -->
-    <div class="announcement-banner">
-      <div class="container">
-        <div class="banner-content">
-          <i class="fa fa-bullhorn" aria-hidden="true"></i>
-          <span class="banner-text">Welcome to my portfolio! Currently seeking internship opportunities in software development.</span>
-          <a href="#contact-section" class="banner-button">Contact Me</a>
-        </div>
-      </div>
-    </div>
-
-    <section id="home-section" class="hero">
+	  <section id="home-section" class="hero">
 		  <div class="home-slider  owl-carousel">
 	       <div class="slider-item ">
 	      	<div class="overlay"></div>
