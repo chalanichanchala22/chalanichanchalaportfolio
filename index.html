@@ -134,6 +134,89 @@
   transform: scale(1.1);
 }
 
+/* Ensure certificate images display properly */
+.blog-entry {
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+/* Add this to your existing styles */
+.block-20.zoom-effect {
+    height: 230px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Enhanced certificate display for better mobile responsiveness */
+.block-20.zoom-effect {
+    height: 230px;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat;
+    position: relative;
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s ease-out;
+    overflow: hidden;
+}
+
+/* Fix for certificate images */
+#certificate-section .blog-entry {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+#certificate-section .text {
+    width: 100%;
+    padding: 15px 10px;
+}
+
+/* Specific mobile adjustments for certificate section */
+@media (max-width: 768px) {
+    #certificate-section .blog-entry {
+        margin-bottom: 2.5rem;
+    }
+    
+    #certificate-section .block-20.zoom-effect {
+        height: 180px;
+        max-height: 180px;
+    }
+    
+    #certificate-section .heading {
+        font-size: 18px;
+    }
+    
+    #certificate-section p {
+        font-size: 14px;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+    #certificate-section .block-20.zoom-effect {
+        height: 150px;
+    }
+    
+    #certificate-section .row {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    
+    #certificate-section .col-md-4 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
 /* Mobile Responsiveness Improvements */
 @media (max-width: 768px) {
     /* General responsive adjustments */
@@ -201,6 +284,37 @@
         padding-left: 15px;
         padding-right: 15px;
     }
+}
+
+/* Image marquee container styles */
+.image-marquee-container {
+    width: 100%;
+    overflow: hidden;
+    background: rgba(0,0,0,0.03);
+    border-radius: 8px;
+    padding: 20px 0;
+    margin: 20px 0 40px;
+}
+
+.image-marquee {
+    display: flex;
+    width: max-content; /* Ensure container expands to fit all images */
+    animation: scroll 60s linear infinite; /* Slower animation for better loading */
+}
+
+.image-group {
+    display: flex;
+    flex-shrink: 0;
+}
+
+.marquee-img {
+    height: 220px;
+    width: auto;
+    min-width: 220px; /* Add minimum width */
+    margin: 0 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    object-fit: cover; /* Ensure image fills area properly */
 }
 
 </style>
@@ -434,7 +548,7 @@
             <div class="row">
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry justify-content-end">
-                        <a href="#" class="block-20 zoom-effect" style="background-image: url('images/cert_hackerrank.PNG">
+                        <a href="#" class="block-20 zoom-effect" style="background-image: url('images/cert_hackerrank.PNG');">
                         </a>
                         <div class="text mt-3 float-right d-block">
                             <h3 class="heading"><a href="#">HackerRank Certification</a></h3>
@@ -458,7 +572,7 @@
                 
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry justify-content-end">
-                        <a href="#" class="block-20 zoom-effect" style="background-image: url('images/cert_womens_hackathon.PNG">
+                        <a href="#" class="block-20 zoom-effect" style="background-image: url('images/cert_womens_hackathon.PNG');">
                         </a>
                         <div class="text mt-3 float-right d-block">
                             <h3 class="heading"><a href="#">Women's Hackathon Certification</a></h3>
@@ -626,8 +740,8 @@
         <div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
             <h1 class="big big-2">Gallery</h1>
-            <h2 class="mb-4">INSURGEX 1.0 Event Highlights</h2>
-            <p>Showcasing memorable moments from the INSURGEX 1.0 Hackathon where I served as Project Secretary</p>
+            <h2 class="mb-4">Event Highlights</h2>
+            <p><p>Showcasing memorable moments from INSURGEX 1.0, where I served as Project Secretary. This intra-university hackathon brought together innovative minds from across the University of Ruhuna, fostering collaboration and technical excellence. As part of the organizing committee, I coordinated event logistics, maintained documentation, and helped create networking opportunities that continue to spark future collaborations among participants.</p></p>
           </div>
         </div>
         
@@ -643,15 +757,27 @@
                   <img src="images/gallery/event4.jpeg" alt="INSURGEX Event" class="marquee-img">
                   <img src="images/gallery/event5.jpeg" alt="INSURGEX Event" class="marquee-img">
                   <img src="images/gallery/event6.jpeg" alt="INSURGEX Event" class="marquee-img">
+                  <img src="images/gallery/event7.jpeg" alt="INSURGEX Event" class="marquee-img">
+                  <img src="images/gallery/event8.jpeg" alt="INSURGEX Event" class="marquee-img">
+                  <img src="images/gallery/event9.jpeg" alt="INSURGEX Event" class="marquee-img">
+                  <img src="images/gallery/event10.jpeg" alt="INSURGEX Event" class="marquee-img">
+                  <img src="images/gallery/event11.jpeg" alt="INSURGEX Event" class="marquee-img">
+                  <img src="images/gallery/event12.jpeg" alt="INSURGEX Event" class="marquee-img">
+                  <img src="images/gallery/event13.jpeg" alt="INSURGEX Event" class="marquee-img">
+                  <img src="images/gallery/event14.jpeg" alt="INSURGEX Event" class="marquee-img">
+                  <img src="images/gallery/event15.jpeg" alt="INSURGEX Event" class="marquee-img">
+                  <img src="images/gallery/event16.jpeg" alt="INSURGEX Event" class="marquee-img">
+                  <img src="images/gallery/event17.jpeg" alt="INSURGEX Event" class="marquee-img">
+                  <img src="images/gallery/event18.jpeg" alt="INSURGEX Event" class="marquee-img">
                 </div>
                 <!-- Duplicate images for seamless looping -->
                 <div class="image-group">
-                  <img src="images/gallery/event1.jpeg" alt="INSURGEX Event" class="marquee-img">
-                  <img src="images/gallery/event2.jpeg" alt="INSURGEX Event" class="marquee-img">
-                  <img src="images/gallery/event3.jpeg" alt="INSURGEX Event" class="marquee-img">
+                  <img src="images/gallery/event13.jpeg" alt="INSURGEX Event" class="marquee-img">
+                  <img src="images/gallery/event14.jpeg" alt="INSURGEX Event" class="marquee-img">
+                  <img src="images/gallery/event15.jpeg" alt="INSURGEX Event" class="marquee-img">
                   <img src="images/gallery/event4.jpeg" alt="INSURGEX Event" class="marquee-img">
                   <img src="images/gallery/event5.jpeg" alt="INSURGEX Event" class="marquee-img">
-                  <img src="images/gallery/event6.jpeg" alt="INSURGEX Event" class="marquee-img">
+                  <img src="images/gallery/event16.jpeg" alt="INSURGEX Event" class="marquee-img">
                 </div>
               </div>
             </div>
@@ -838,6 +964,65 @@
             });
         }
     });
+
+    // Add error handling for marquee images
+    const marqueeImages = document.querySelectorAll('.marquee-img');
+    
+    marqueeImages.forEach(img => {
+      img.onerror = function() {
+        console.error('Failed to load image:', img.src);
+        // Replace with a placeholder and add a visible indicator
+        this.src = 'images/placeholder.jpg'; // Create a placeholder image
+        this.style.border = '2px solid red';
+      };
+      
+      // Force image reload with cache-busting
+      const currentSrc = img.src;
+      img.src = currentSrc + '?v=' + new Date().getTime();
+    });
+
+    // Progressive image loading for marquee
+    const loadMarqueeImagesProgressively = () => {
+      const images = document.querySelectorAll('.marquee-img');
+      let loadedCount = 0;
+      
+      // Function to load next image
+      const loadNextImage = (index) => {
+        if (index >= images.length) return;
+        
+        const img = images[index];
+        const dataSrc = img.src; // Store original source
+        
+        // Start with low quality placeholder
+        img.style.filter = 'blur(5px)';
+        
+        // Create a new image object to preload
+        const imgLoader = new Image();
+        imgLoader.onload = () => {
+          // Once loaded, apply to actual image
+          img.src = dataSrc;
+          img.style.filter = 'blur(0)';
+          loadedCount++;
+          
+          // Load next image after a small delay
+          setTimeout(() => loadNextImage(index + 1), 100);
+        };
+        
+        imgLoader.onerror = () => {
+          console.error('Failed to load:', dataSrc);
+          setTimeout(() => loadNextImage(index + 1), 100);
+        };
+        
+        // Start loading the actual image
+        imgLoader.src = dataSrc;
+      };
+      
+      // Begin loading the first few images immediately
+      loadNextImage(0);
+    };
+    
+    // Start loading on DOMContentLoaded
+    document.addEventListener('DOMContentLoaded', loadMarqueeImagesProgressively);
   </script>
     
   </body>
