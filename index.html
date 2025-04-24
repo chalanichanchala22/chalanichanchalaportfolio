@@ -134,6 +134,23 @@
   transform: scale(1.1);
 }
 
+/* Main image styles */
+
+.main-image-container {
+    margin: 20px 0;
+    max-width: 100%;
+}
+
+.main-hero-image {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.main-hero-image:hover {
+    transform: scale(1.03);
+}
 
 </style>
 
@@ -165,7 +182,7 @@
     </nav>
 	  <section id="home-section" class="hero">
 		  <div class="home-slider  owl-carousel">
-	       <div class="slider-item ">
+	       <div class="slider-item" style="background-image: url('images/my-background.jpg');">
 	      	<div class="overlay"></div>
 	         <div class="container">
 	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
@@ -175,7 +192,7 @@
 		          		<span class="subheading">Hello!</span>
 			            <h1 class="mb-4 mt-3">I'm <span>Chalani Chanchala</span></h1>
                         <div class="main-image-container">
-                            <img src="images/main.jpg" alt="Chalani Chanchala" class="main-hero-image">
+                            <img src="images/main.jpg" alt="Chalani Chanchala" class="main-image">
                         </div>
 
 						<!-- Element to contain animated typing -->
