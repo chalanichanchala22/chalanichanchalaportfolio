@@ -134,53 +134,6 @@
   transform: scale(1.1);
 }
 
-/* Header Image Marquee Styling */
-.header-image-marquee {
-  width: 100%;
-  background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.7));
-  padding: 10px 0;
-  position: relative;
-  z-index: 899; /* Just below navbar z-index */
-  overflow: hidden;
-}
-
-.header-image-marquee .marquee-content {
-  display: flex;
-  animation: header-marquee-scroll 30s linear infinite;
-}
-
-.header-image-marquee .marquee-item {
-  flex: 0 0 auto;
-  margin: 0 10px;
-}
-
-.header-image-marquee .marquee-item img {
-  height: 60px;
-  border-radius: 5px;
-  box-shadow: 0 2px 10px rgba(255,255,255,0.15);
-  transition: all 0.3s ease;
-}
-
-.header-image-marquee .marquee-item img:hover {
-  transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 5px 15px rgba(255,255,255,0.3);
-}
-
-@keyframes header-marquee-scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-  .header-image-marquee .marquee-item img {
-    height: 45px;
-  }
-}
 
 </style>
 
@@ -210,27 +163,6 @@
           </div>
         </div>
     </nav>
-
-    <!-- Image Marquee -->
-    <div class="header-image-marquee">
-      <div class="marquee-content">
-        <div class="marquee-item"><img src="images/gallery/event1.jpeg" alt="Event Photo"></div>
-        <div class="marquee-item"><img src="images/gallery/event2.jpeg" alt="Event Photo"></div>
-        <div class="marquee-item"><img src="images/gallery/event3.jpeg" alt="Event Photo"></div>
-        <div class="marquee-item"><img src="images/gallery/event4.jpeg" alt="Event Photo"></div>
-        <div class="marquee-item"><img src="images/gallery/event5.jpeg" alt="Event Photo"></div>
-        <div class="marquee-item"><img src="images/gallery/event6.jpeg" alt="Event Photo"></div>
-        
-        <!-- Duplicated for continuous loop -->
-        <div class="marquee-item"><img src="images/gallery/event1.jpeg" alt="Event Photo"></div>
-        <div class="marquee-item"><img src="images/gallery/event2.jpeg" alt="Event Photo"></div>
-        <div class="marquee-item"><img src="images/gallery/event3.jpeg" alt="Event Photo"></div>
-        <div class="marquee-item"><img src="images/gallery/event4.jpeg" alt="Event Photo"></div>
-        <div class="marquee-item"><img src="images/gallery/event5.jpeg" alt="Event Photo"></div>
-        <div class="marquee-item"><img src="images/gallery/event6.jpeg" alt="Event Photo"></div>
-      </div>
-    </div>
-
 	  <section id="home-section" class="hero">
 		  <div class="home-slider  owl-carousel">
 	       <div class="slider-item ">
