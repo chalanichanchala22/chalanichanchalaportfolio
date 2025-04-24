@@ -534,25 +534,119 @@
       </div>
     </section>
 
-<section>
-
-	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
     
-	
-	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
-		<div class="container"> 
-				<div class="row justify-content-center">
-					<div class="col-md-7 ftco-animate text-center">
-						<h2>More projects on<span> Github  </span> </h2>
-						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
-						<br>
-						<p><a href="https://github.com/chalanichanchala22" class="btn btn-primary py-3 px-5">GitHub</a></p>
-						</div>
-					</div>
-				</div>
-			</div> 
-		</div>
-	</section>
+    
+      <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+        <div class="container"> 
+                <div class="row justify-content-center">
+                    <div class="col-md-7 ftco-animate text-center">
+                        <h2>More projects on<span> Github  </span> </h2>
+                        <div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
+                        <br>
+                        <p><a href="https://github.com/chalanichanchala22" class="btn btn-primary py-3 px-5">GitHub</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </section>
+
+    <!-- Event Gallery Section with Marquee -->
+    <section class="ftco-section" id="gallery-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Gallery</h1>
+            <h2 class="mb-4">INSURGEX 1.0 Event Highlights</h2>
+            <p>Showcasing memorable moments from the INSURGEX 1.0 Hackathon where I served as Project Secretary</p>
+          </div>
+        </div>
+        
+        <!-- Image Marquee -->
+        <div class="row">
+          <div class="col-md-12 ftco-animate">
+            <div class="image-marquee-container">
+              <div class="image-marquee">
+                <div class="image-group">
+                  <img src="images/gallery/event1.jpg" alt="INSURGEX Event" class="marquee-img">
+                  <img src="images/gallery/event2.jpg" alt="INSURGEX Event" class="marquee-img">
+                  <img src="images/gallery/event3.jpg" alt="INSURGEX Event" class="marquee-img">
+                  <img src="images/gallery/event4.jpg" alt="INSURGEX Event" class="marquee-img">
+                  <img src="images/gallery/event5.jpg" alt="INSURGEX Event" class="marquee-img">
+                  <img src="images/gallery/event6.jpg" alt="INSURGEX Event" class="marquee-img">
+                </div>
+                <!-- Duplicate images for seamless looping -->
+                <div class="image-group">
+                  <img src="images/gallery/event1.jpg" alt="INSURGEX Event" class="marquee-img">
+                  <img src="images/gallery/event2.jpg" alt="INSURGEX Event" class="marquee-img">
+                  <img src="images/gallery/event3.jpg" alt="INSURGEX Event" class="marquee-img">
+                  <img src="images/gallery/event4.jpg" alt="INSURGEX Event" class="marquee-img">
+                  <img src="images/gallery/event5.jpg" alt="INSURGEX Event" class="marquee-img">
+                  <img src="images/gallery/event6.jpg" alt="INSURGEX Event" class="marquee-img">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <style>
+          .image-marquee-container {
+            width: 100%;
+            overflow: hidden;
+            background: rgba(0,0,0,0.03);
+            border-radius: 8px;
+            padding: 20px 0;
+            margin: 20px 0 40px;
+          }
+          
+          .image-marquee {
+            display: flex;
+            animation: scroll 40s linear infinite;
+          }
+          
+          .image-marquee:hover {
+            animation-play-state: paused;
+          }
+          
+          .image-group {
+            display: flex;
+            flex-shrink: 0;
+          }
+          
+          .marquee-img {
+            height: 220px;
+            width: auto;
+            margin: 0 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+          }
+          
+          .marquee-img:hover {
+            transform: scale(1.05) translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+            cursor: pointer;
+          }
+          
+          @keyframes scroll {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-50%);
+            }
+          }
+          
+          @media (max-width: 768px) {
+            .marquee-img {
+              height: 180px;
+              margin: 0 10px;
+            }
+          }
+        </style>
+      </div>
+    </section>
 
 
 
